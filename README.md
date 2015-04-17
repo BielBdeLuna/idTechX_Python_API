@@ -1,2 +1,3 @@
-# idTechX_Python_API
+# techXpy - the idTechX Python API
+
 a Python API for accessing idTechX assets

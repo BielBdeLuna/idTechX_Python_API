@@ -20,13 +20,12 @@ import utils
 class entity_context:
     ENTITIES_DEF_PATH = ""
     EXTENSION = ""
-    l_entities = []
-
     
     def __init__( game_context, ent_dir="def", extension="def" )
-        utils.dir_exist_or_GTFO( os.join( game_context.GAME_DIR, ent_dir ) )
+        ent_path = os.path.join( game_context.GAME_DIR, ent_dir )
+        utils.dir_exist_or_GTFO( ent_path )
         self.ENTITIES_DEF_PATH = ent_dir
-        self.EXTENSION = extension
+        self.EXTENSION = os.extsep + extension
 
     def get_list_of_entities(context):
         l_relevantfiles = []
